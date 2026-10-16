@@ -6,7 +6,7 @@
 
 基于 [Nuxt 4](https://nuxt.com)、[Nuxt UI](https://ui.nuxt.com) 与 [Movk Nuxt](https://nuxt.mhaibaraai.cn) 的最简启动模版：开箱即用的主题、ESLint 与类型检查，支持 Node、Docker 与静态托管三种部署方式。
 
-[Movk Nuxt 文档](https://nuxt.mhaibaraai.cn) · [Nuxt UI 文档](https://ui.nuxt.com)
+[在线预览](https://movk-nuxt-starter.vercel.app) · [Movk Nuxt 文档](https://nuxt.mhaibaraai.cn) · [Nuxt UI 文档](https://ui.nuxt.com)
 
 ## 快速开始
 
@@ -71,7 +71,7 @@ docker run -p 3000:3000 movk-nuxt-starter
 
 ### 一键部署
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-name=movk-nuxt-starter&repository-url=https%3A%2F%2Fgithub.com%2Fmhaibaraai%2Fmovk-nuxt-starter)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-name=movk-nuxt-starter&repository-url=https%3A%2F%2Fgithub.com%2Fmhaibaraai%2Fmovk-nuxt-starter&demo-url=https%3A%2F%2Fmovk-nuxt-starter.vercel.app%2F&demo-title=Movk%20Nuxt%20Starter&demo-description=A%20minimal%20starter%20template%20for%20Nuxt%204%2C%20Nuxt%20UI%20and%20Movk%20Nuxt.)
 
 ## 子路径部署
 

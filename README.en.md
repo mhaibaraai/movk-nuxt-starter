@@ -6,7 +6,7 @@
 
 A minimal starter template for [Nuxt 4](https://nuxt.com), [Nuxt UI](https://ui.nuxt.com) and [Movk Nuxt](https://nuxt.mhaibaraai.cn): theming, ESLint and type checking out of the box, deployable to Node, Docker or static hosting.
 
-[Movk Nuxt Documentation](https://nuxt.mhaibaraai.cn) · [Nuxt UI Documentation](https://ui.nuxt.com)
+[Live Demo](https://movk-nuxt-starter.vercel.app) · [Movk Nuxt Documentation](https://nuxt.mhaibaraai.cn) · [Nuxt UI Documentation](https://ui.nuxt.com)
 
 ## Quick Start
 
@@ -71,7 +71,7 @@ The image processing dependency (sharp) in the image matches the build machine's
 
 ### One-click Deploy
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-name=movk-nuxt-starter&repository-url=https%3A%2F%2Fgithub.com%2Fmhaibaraai%2Fmovk-nuxt-starter)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-name=movk-nuxt-starter&repository-url=https%3A%2F%2Fgithub.com%2Fmhaibaraai%2Fmovk-nuxt-starter&demo-url=https%3A%2F%2Fmovk-nuxt-starter.vercel.app%2F&demo-title=Movk%20Nuxt%20Starter&demo-description=A%20minimal%20starter%20template%20for%20Nuxt%204%2C%20Nuxt%20UI%20and%20Movk%20Nuxt.)
 
 ## Sub-path Deployment
 
