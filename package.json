@@ -16,8 +16,8 @@
     "clean": "movk-clean"
   },
   "dependencies": {
-    "@iconify-json/lucide": "^1.2.144",
-    "@iconify-json/simple-icons": "^1.2.100",
+    "@iconify-json/lucide": "^1.2.147",
+    "@iconify-json/simple-icons": "^1.2.101",
     "@movk/core": "^1.5.0",
     "@movk/nuxt": "^1.8.3",
     "@nuxt/ui": "^4.12.0",
@@ -28,10 +28,10 @@
   "devDependencies": {
     "@nuxt/eslint": "^1.17.0",
     "@types/node": "^26.6.5",
-    "eslint": "^10.12.0",
-    "eslint-plugin-better-tailwindcss": "^4.9.1",
+    "eslint": "^10.13.0",
+    "eslint-plugin-better-tailwindcss": "^4.10.0",
     "typescript": "^6.0.3",
     "vue-tsc": "^3.3.13"
   },
-  "packageManager": "pnpm@12.11.2"
+  "packageManager": "pnpm@12.15.0"
 }

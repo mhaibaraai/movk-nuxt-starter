@@ -5,6 +5,3 @@ allowBuilds:
   sharp: true
   unrs-resolver: false
   vue-demi: false
-minimumReleaseAgeExclude:
-  - '@nuxt/ui@4.12.0'
-  - '@movk/nuxt@1.8.3'
