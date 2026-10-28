@@ -8,6 +8,8 @@
     "generate": "nuxt generate --envName spa",
     "dev": "nuxt dev",
     "preview": "nuxt preview",
+    "docker:build": "docker build -t movk-nuxt-starter .",
+    "docker:prod": "docker run --rm -p 3000:3000 --env-file .env.production movk-nuxt-starter",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
     "typecheck": "nuxt typecheck",

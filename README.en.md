@@ -57,6 +57,19 @@ docker run -p 3000:3000 movk-nuxt-starter
 
 The image processing dependency (sharp) in the image matches the build machine's architecture. When deploying to a server with a different architecture, specify it with `--platform`, e.g. `docker build --platform linux/amd64 -t movk-nuxt-starter .`.
 
+#### Multiple Environments
+
+Build the image once and inject per-environment variables at runtime with `--env-file`, no rebuild needed. The repository ships [`.env.production`](./.env.production) as a demo:
+
+```bash
+pnpm docker:build
+pnpm docker:prod
+```
+
+For other environments, copy `.env.production` to `.env.staging` etc. (git-ignored by default) and run `docker run -p 3000:3000 --env-file .env.staging movk-nuxt-starter`.
+
+Variable names are `NUXT_` plus the upper snake case `runtimeConfig` path, e.g. `runtimeConfig.public.movkApi.endpoints.default.baseURL` maps to `NUXT_PUBLIC_MOVK_API_ENDPOINTS_DEFAULT_BASE_URL`. Only keys declared in `runtimeConfig` (or `movk.api`) can be overridden. Inject real secrets in the deployment environment and never commit them.
+
 ### Static Hosting
 
 1. Run `pnpm generate`.
@@ -90,6 +103,7 @@ For static hosting, place the output under `admin/` in your site directory, then
 | Variable | Description |
 | --- | --- |
 | `NUXT_APP_BASE_URL` | Deployment base path, defaults to `/` |
+| `NUXT_PUBLIC_MOVK_API_ENDPOINTS_DEFAULT_BASE_URL` | Default API base URL, defaults to `/api` |
 | `NUXT_SESSION_PASSWORD` | Required only when `movk.api.auth` session auth is enabled, at least 32 characters |
 
 ## Renovate Integration

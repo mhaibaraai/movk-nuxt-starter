@@ -57,6 +57,19 @@ docker run -p 3000:3000 movk-nuxt-starter
 
 镜像中的图片处理依赖（sharp）与构建机架构一致，部署到不同架构的服务器时，请通过 `--platform` 指定目标架构，如 `docker build --platform linux/amd64 -t movk-nuxt-starter .`。
 
+#### 多环境
+
+镜像只构建一次，不同环境在运行时通过 `--env-file` 注入变量，无需重新构建。仓库提供 [`.env.production`](./.env.production) 作为演示：
+
+```bash
+pnpm docker:build
+pnpm docker:prod
+```
+
+其他环境可复制 `.env.production` 为 `.env.staging` 等（默认被 git 忽略），再执行 `docker run -p 3000:3000 --env-file .env.staging movk-nuxt-starter`。
+
+变量名为 `NUXT_` 加 `runtimeConfig` 路径的大写下划线形式，如 `runtimeConfig.public.movkApi.endpoints.default.baseURL` 对应 `NUXT_PUBLIC_MOVK_API_ENDPOINTS_DEFAULT_BASE_URL`，仅对已在 `runtimeConfig`（或 `movk.api`）中声明的键生效。真实密钥请在部署环境中注入，不要提交到仓库。
+
 ### 静态托管
 
 1. 执行 `pnpm generate`。
@@ -90,6 +103,7 @@ docker run -p 3000:3000 movk-nuxt-starter
 | 变量 | 说明 |
 | --- | --- |
 | `NUXT_APP_BASE_URL` | 部署基础路径，默认 `/` |
+| `NUXT_PUBLIC_MOVK_API_ENDPOINTS_DEFAULT_BASE_URL` | 默认接口地址，默认 `/api` |
 | `NUXT_SESSION_PASSWORD` | 仅在开启 `movk.api.auth` 会话认证时必填，至少 32 个字符 |
 
 ## Renovate 集成
